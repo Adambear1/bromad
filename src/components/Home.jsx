@@ -1,7 +1,10 @@
 import React from 'react'
 import Card from './props/Card'
+import Modal from "./props/Modal"
 
 function Home() {
+  const [show, setShow] = React.useState(false);
+  const [index, setIndex] = React.useState();
   const desertSunset = "https://images.pexels.com/photos/36744/agriculture-arable-clouds-countryside.jpg?auto=compress&cs=tinysrgb&w=1600";
   const wine = "https://images.pexels.com/photos/39351/purple-grapes-vineyard-napa-valley-napa-vineyard-39351.jpeg?auto=compress&cs=tinysrgb&w=1600";
   const mountains = "https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&w=1600";
@@ -14,33 +17,32 @@ function Home() {
   const cards = [
     {
       src: desertSunset,
-      content: "lorem ipsum"
-    }, {
+      content: "Travel",
+      info: "The Bromad believes in traveling the world which propels one in life to get out of one's comfort zone, explore new places, create meaningful experiences and to build and invest to help those around you. This is the core pillar of the Bromad mentality."
+    },
+    {
       src: wine,
-      content: "lorem ipsum"
-    }, {
+      content: "Experience"
+    },
+    {
       src: mountains,
-      content: "lorem ipsum"
-    }, 
+      content: "Explore"
+    },
     {
       src: coding,
-      content: "lorem ipsum"
-    },
-    {
+      content: "Create"
+    }, {
       src: ocean,
-      content: "lorem ipsum"
-    },
-    {
+      content: "Build"
+    }, {
       src: coffee,
-      content: "lorem ipsum"
-    },
-    {
+      content: "Taste"
+    }, {
       src: jungle,
-      content: "lorem ipsum"
-    },
-    {
+      content: "Navigate"
+    }, {
       src: building,
-      content: "lorem ipsum"
+      content: "Invest"
     },
   ]
   return (
@@ -50,13 +52,30 @@ function Home() {
           {
           cards.map(({
             src,
-            content
-          }, index) => <div className="col-12 col-sm-3 mt-1 p-1">
+            content,
+            info
+          }, i) => <div className="col-12 col-sm-3 mt-1 p-1">
             <Card src={src}
               content={content}
-              key={index}/>
+              key={i}
+              cta={
+                () => {
+                  setIndex(i);
+                  setShow(!show);
+                }
+              }/>
           </div>)
-        } </div>
+        }
+          {show && <Modal title={
+              cards[index].content
+            }
+            info={
+              cards[index].info
+            }
+            show={show}
+            setShow={setShow}/>
+          }
+        </div>
       </div>
     </>
   )

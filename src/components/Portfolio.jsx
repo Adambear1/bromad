@@ -14,6 +14,9 @@ import {
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
 import InfoCard from './props/InfoCard';
 
+import ssk from "../utils/images/ssk.jpeg"
+import mollyshopsimage from "../utils/images/mollyshops.jpeg"
+
 export default function Portfolio() {
   const [section, setSection] = React.useState("real estate");
   //PLACEHOLDER LOGOS
@@ -26,16 +29,17 @@ export default function Portfolio() {
   const KingwoodHouse = "https://photos.harstatic.com/206183029/hr/img-1.jpeg";
   const UPHouse = "https://photos.zillowstatic.com/fp/f674df71a3bcb78b4f0ec73a2850d306-uncropped_scaled_within_1536_1152.webp"
   // BUSINESSES
-  const SSK = "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/118444461_944070242779400_6952459331867979205_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ol6KgfTHZO0AX-7sk49&_nc_ht=scontent-dfw5-1.xx&oh=00_AfBwjOzotbdoZRHsbi3-nnhs1ZZy4hVPF9QJxyM9t9hwlQ&oe=63B2B4F1"
+  const SSK = ssk;
   const BromadConsulting = placeholder_logo;
   const BAC = placeholder_logo;
+  const CDLM = placeholder_logo;
   // WEBSITES
   const zipprichCPAS = "https://www.zipprichcpas.com/images/logo.png";
   const zipprichResorts = placeholder_logo;
-  const mollyshops = "https://scontent-dfw5-1.xx.fbcdn.net/v/t1.6435-9/40512939_1924585224263863_994973816008474624_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=CLqpb3BNJl0AX8cV_Of&_nc_ht=scontent-dfw5-1.xx&oh=00_AfCa8xhB7dUza_5Y5yswNDp0OyVhFTIW-4lkir4kEdZaJA&oe=63B2D74F";
+  const mollyshops = mollyshopsimage;
   const spotlesssquad = "https://static.wixstatic.com/media/343523_22e61fe7ee1d4d2a8c75bc5717d67580.png/v1/fill/w_241,h_335,al_c,lg_1,q_85,enc_auto/343523_22e61fe7ee1d4d2a8c75bc5717d67580.png";
-  const wwwoa = "https://www.wwwoa.org/wrestling-icon.jpg";
-  const tacticaltrees = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/evergreen-tree_1f332.png"
+  const wwwoa = "http://www.wwwoa.org/wrestling-icon.jpg";
+  const tacticaltrees = "https://images.emojiterra.com/twitter/v14.0/512px/1f332.png"
   const shieldpad = placeholder_logo;
   const _component = {
     "real estate": [
@@ -82,19 +86,25 @@ export default function Portfolio() {
         year: "Coming soon..."
       },
       {
-        name: "development",
-        location: "Tulum, MX",
-        src: house_placeholder_logo,
-        year: "Coming soon..."
-      },
-      {
         name: "single family house",
         location: "Phoenix, AZ",
         src: house_placeholder_logo,
         year: "Coming soon..."
       },
+      {
+        name: "multifamily family house",
+        location: "Conroe, TX",
+        src: house_placeholder_logo,
+        year: "Coming soon..."
+      }
     ],
     "businesses": [
+      {
+        name: "La Chateaus de Malinalco",
+        location: "Malinalco, MX",
+        year: "2023",
+        src: CDLM,
+      },
       {
         name: "Seven Sons Kitchen",
         location: "Greater Seattle Area, WA",

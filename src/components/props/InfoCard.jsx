@@ -12,7 +12,7 @@ import {
 
 export default function InfoCard({name, src, location, year, link}) {
   return (
-    <MDBCard alignment='center'>
+    <MDBCard alignment='center m-2'>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
         <MDBCardImage src={src} fluid alt='...'/>
         <a>
@@ -29,7 +29,7 @@ export default function InfoCard({name, src, location, year, link}) {
         </MDBCardText>
         {link && <MDBBtn href={link}>Visit!</MDBBtn>}
       </MDBCardBody>
-      <MDBCardFooter className='text-muted'>{year}</MDBCardFooter>
+      {year && <MDBCardFooter className='text-muted'>{year}</MDBCardFooter>}
     </MDBCard>
   );
 }
