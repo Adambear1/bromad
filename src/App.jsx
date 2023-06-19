@@ -7,6 +7,7 @@ import "./utils/styles.css"
 import Carousel from './components/Carousel';
 import Navbar from './components/Navbar';
 import About from "./components/About";
+import Reviews from "./components/Reviews";
 import Locations from "./components/Locations";
 import Portfolio from "./components/Portfolio";
 import Philosophy from "./components/Philosophy";
@@ -17,25 +18,36 @@ import Footer from "./components/Footer";
 
 function App() {
   const [page, setPage] = React.useState("home");
+  const [currentIndex, setCurrentIndex] = React.useState(0);
   const _component = {
-    home: <Home/>,
-    about: <About/>,
-    locations: <Locations/>,
-    portfolio: <Portfolio/>,
-    philosophy: <Philosophy/>}
+    home: <Home />,
+    about: <About />,
+    reviews: <Reviews />,
+    locations: <Locations />,
+    portfolio: <Portfolio />,
+    philosophy: <Philosophy />
+  }
+  var page_array = Object.keys(_component);
   return (
     <>
       <header>
-        <TopNavbar/>
-        <Carousel/>
+        <TopNavbar cta={() => {
+          let cI = currentIndex
+          setCurrentIndex(cI += 1);
+          console.log(currentIndex);
+          if(currentIndex === 5){setCurrentIndex(0)}
+          setPage(page_array[currentIndex]);
+        }
+          } />
+        <Carousel />
         <Navbar page={page}
-          setPage={setPage}/>
+          setPage={setPage} />
       </header>
       <body> {
         _component[page]
       } </body>
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </>
   );

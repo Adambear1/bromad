@@ -9,12 +9,15 @@ import {
   MDBRipple,
   MDBCardFooter
 } from 'mdb-react-ui-kit';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function InfoCard({name, src, location, year, link}) {
   return (
     <MDBCard alignment='center m-2'>
       <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-        <MDBCardImage src={src} fluid alt='...'/>
+        <LazyLoadImage src={src}  style={{maxHeight: "100%", maxWidth: "100%", objectFit: "cover"}}
+        alt="Image Alt"
+      />
         <a>
           <div className='mask'
             style={

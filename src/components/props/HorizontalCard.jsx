@@ -4,10 +4,10 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBCardBody,
-  MDBCardImage,
   MDBRow,
   MDBCol
 } from 'mdb-react-ui-kit';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function HorizontalCard({src, content, name}) {
   return (

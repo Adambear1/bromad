@@ -1,10 +1,10 @@
 import React from 'react';
 import {MDBCard, MDBCardBody, MDBCardText, MDBCardImage, MDBCardTitle} from 'mdb-react-ui-kit';
 
-export default function Card({src, content, name, cta}) {
+export default function Card({src, content, name, cta, pointer}) {
   return (
     <>
-    <MDBCard onClick={() => cta && cta()}>
+    <MDBCard onClick={() => cta && cta()} style={pointer && {cursor : "pointer"}}>
       {src && <MDBCardImage src={src}
         style={
           {

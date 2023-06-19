@@ -21,7 +21,7 @@ export default function Portfolio() {
   const [section, setSection] = React.useState("real estate");
   //PLACEHOLDER LOGOS
   const house_placeholder_logo = "https://cdn.dribbble.com/users/110792/screenshots/17024372/placeholder-listings.png?compress=1&resize=400x300";
-  const placeholder_logo = "https://i.pinimg.com/originals/a1/b7/37/a1b7370dc7cf8f61698201e3ab617854.png"
+  const placeholder_logo = "https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png"
   // REAL ESTATE
   const e56thHouse = "https://photos.zillowstatic.com/fp/bedaa15c78744ee1634295c27af9c109-uncropped_scaled_within_1536_1152.webp";
   const FedWayHouse = "https://photos.zillowstatic.com/fp/4902d49827dc108024d445ad6dc3130a-uncropped_scaled_within_1536_1152.webp";
@@ -80,23 +80,17 @@ export default function Portfolio() {
         year: "Coming soon..."
       },
       {
-        name: "single family house",
-        location: "Tacoma, WA",
+        name: "condo",
+        location: "Mexico City, MX",
         src: house_placeholder_logo,
         year: "Coming soon..."
       },
       {
-        name: "single family house",
-        location: "Phoenix, AZ",
+        name: "resort",
+        location: "Malinalco, MX",
         src: house_placeholder_logo,
         year: "Coming soon..."
       },
-      {
-        name: "multifamily family house",
-        location: "Conroe, TX",
-        src: house_placeholder_logo,
-        year: "Coming soon..."
-      }
     ],
     "businesses": [
       {
@@ -206,7 +200,19 @@ export default function Portfolio() {
       name: "Geocoordinate Distance Tracker API",
       location: "online API",
       src: placeholder_logo,
-      year: ""
+      year: "-"
+    },
+    {
+      name: "MLB Tic-Tac-Toe Guesser",
+      location: "Free Online Guessing Game",
+      src: placeholder_logo,
+      year: "-"
+    },
+    {
+      name: "Shopify Analytics App",
+      location: "Hydrogen application, downloadable for enhanced ecommerce tracking",
+      src: placeholder_logo,
+      year: "Contact for more information."
     },
 
   ]
