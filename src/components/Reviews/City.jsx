@@ -102,15 +102,23 @@ function City() {
         {
             name: "Malinalco",
             attributes: ["nature driven", "tranquil", "adventurous"],
-            description: "A description of Malinalco.",
+            description: "A beautiful, quaint pueblo magico an hour outside of Mexico City. This city is recorded to only have 20,000 residences, but their downtown is always seemingly crowded with all 20,000 residences. There is no driving down there due to all the foot traffic, but is very walkable and highly recommended to visit. This will be another city in 10-15 years that will see high economic growth for those seeking tranquility and nature.",
             rating: 4,
             pros: ["Tranquil", "Adventurous"]
         },
         {
             name: "Queretero",
             attributes: ["historic", "affordable", "food culture"],
-            description: "A description of Malinalco.",
-            rating: 4,
+            description: "This will be one of the wealthiest cities within the next decade. Centrally located between Mexico City and Guadalajara, there are numerous businesses relocating there due to affordability and proximity. The city itself has a beautiful historic center and a lot of fun activities, such as shopping and vineyards. But it also comes with some poor infrastructure in highways and roads that leads to endless traffic during the day. I like it. I don't love it, but think here within the next few years it will become a hotbed of economic growth.",
+            rating: 3,
+            pros: ["History", "Affordable"],
+            cons: ["Crowded", "Dry", "Traffic"]
+        },
+        {
+            name: "Monterrey",
+            attributes: ["historic", "historic"],
+            description: "One of the fastest growing and business-centric cities in Mexico. Just south of the Texas border this town boasts some of the wealthiest suburbs in all of North America. The reason why this city wasn't a favorite of mine is simply because of the location. Nuevo Leone is notorious for drugs and crime, and with this city in the heart of it, there are a lot of cautions and warnings when going about your daily life. Though the city itself is safe, coming and leaving by anything besides plane brings a lot of random police checkpoints, endless tollbooths, and a lot of traffic. Pairing this with being in the middle of the desert where its 100+ degrees during the summers in a dry heat, I'd rather be elsewhere.",
+            rating: 2,
             pros: ["History", "Affordable", "Food Culture"],
             cons: ["Crowded", "Dry"]
         },
