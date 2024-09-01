@@ -2,65 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-<script>
-  console.log("LOADED " + Date.now());
-  const ctas = /login|signup|subscribe/;
-  
-  var timer = setInterval(function () {
-      dL({ event: "30s_timer" }, "timer");
-  }, 30000);
-  
-  const dL = (obj, _timer) => {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push(obj);
-      if (_timer) {
-          clearInterval(timer);
-      }
-  }
-  document.addEventListener('DOMContentLoaded', function () {
-  
-      document.querySelectorAll('button').forEach(button => {
-          button.addEventListener('click', function (event) {
-              dL({
-                  'event': 'button_click',
-                  'button_text': event.target.textContent.trim() || "",
-                  'button_url': event.target.href || "",
-                  'button_id': event.target.id || ""
-              });
-          });
-      });
-      document.querySelectorAll('a').forEach(link => {
-          const link_type = (href) => {
-              if (href) {
-                  try {
-                      const url = new URL(href)
-                      return url.protocol === "http:" || url.protocol === "https:";
-                  } catch (e) {
-                      return false;
-                  }
-              } else { return false }
-          }
-          link.addEventListener("click", function (event) {
-              const link_text = event.target.textContent.trim() || "";
-              if (link_text.match(ctas)) {
-                  dL({ event: link_text.match(ctas)[0] })
-              }
-              var isOther = event.target.className.match(/pagination|carousel/);
-              if (isOther) { dL({ 'event': isOther[0] }) }
-              else {
-                  dL({
-                      'event': 'link_click',
-                      'link_text': link_text,
-                      'link_url': event.target.href || "",
-                      'link_id': event.target.id || "",
-                      'link_type': link_type(event.target.getAttribute("href")) ? "outbound" : "internal"
-                  });
-              }
-          })
-      })
-  });
-  </script>
   <meta charset="utf-8" />
   <link rel="icon" href="https://hotemoji.com/images/emoji/m/if374ze9psum.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
