@@ -39,7 +39,7 @@ function Food() {
         },
         {
             name: "Chilaquiles",
-            attributes: ["traditional", "breakfaast"],
+            attributes: ["traditional", "breakfast"],
             rating: 2,
             description: "Review ex for new age investing",
         },
@@ -101,7 +101,7 @@ function Food() {
                     }
                     {show && <Modal title={
                         selectedReview.attributes.map((attribute, index) => <Toast
-                            style="m-2"
+                            style={"m-2"}
                             key={index}
                             _c={categories.map(({ text, color }) => text === attribute && color).filter(i => i)[0]}
                             text={attribute}
