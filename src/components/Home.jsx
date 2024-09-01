@@ -66,8 +66,8 @@ function Home() {
               key={i}
               cta={
                 () => {
-                  setIndex(i);
-                  setShow(!show);
+                  // setIndex(i);
+                  // setShow(!show);
                 }
               }/>
           </div>)

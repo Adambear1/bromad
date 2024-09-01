@@ -25,23 +25,24 @@ import tepotzotlan from "../utils/images/tepotzotlan.png";
 import kualalumpur from "../utils/images/kualalumpur.png";
 import bogota from "../utils/images/bogota.png";
 import chiapas from "../utils/images/chiapas.png";
+import sma from "../utils/images/sma.png";
 
 function Locations() {
   const visited = [
-    {
-      name: "Seattle, WA, USA",
-      src: seattle,
-      content: "The beautiful PNW. Able to make the most of the mountains, water and scenery."
-    },
+    // {
+    //   name: "Seattle, WA, USA",
+    //   src: seattle,
+    //   content: "The beautiful PNW. Able to make the most of the mountains, water and scenery."
+    // },
     {
       name: "Puerto Vallarta, Jalisco, MX",
       src: puertovallarta,
       content: "Tropical paradise. Beautiful, great weather, people and overall location. Very affordable, even for being a tourist trap."
     },
-    {
-      name: "Houston, TX, USA",
-      src: houston
-    },
+    // {
+    //   name: "Houston, TX, USA",
+    //   src: houston
+    // },
     {
       name: "Querétaro, Estado de México, MX",
       src: queretaro
@@ -88,14 +89,14 @@ function Locations() {
       name: "Puerto Rico",
       src: puertorico
     },
-    {
-      name: "Phoenix, Arizona, USA",
-      src: phoenix
-    },
-    {
-      name: "Orlando, Florida, USA",
-      src: orlando
-    },
+    // {
+    //   name: "Phoenix, Arizona, USA",
+    //   src: phoenix
+    // },
+    // {
+    //   name: "Orlando, Florida, USA",
+    //   src: orlando
+    // },
     {
       name: "Tepotzotlán, Estado de México, MX",
       src: tepotzotlan
@@ -103,6 +104,10 @@ function Locations() {
     {
       name: "Monterrey, Nuevo Leon, MX",
       src: monterrey
+    },
+    {
+      name: "San Miguel De Allende, Guanajuato, Mexico",
+      src: sma
     }
   ];
   const toVisit = [
@@ -119,7 +124,7 @@ function Locations() {
       src: bogota
     },
     {
-      name: "Chiapas, Oxaca, Columbia",
+      name: "Chiapas, Oxaca, Mexico",
       src: chiapas
     }
   ]

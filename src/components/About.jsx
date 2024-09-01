@@ -7,30 +7,29 @@ function About() {
       <div className="container my-5 ">
 
         <p className='text-center'>
-          <strong className='text-left'>About the Bromad:</strong>
-          {"  "}
-          From investing, business development, personal freedom, and overall experience,
-          this unique twist on Tim Ferriss' "4 Hour Work Week" mixed with modern day
-          Nomadism, this philosophy allows you to get the most in life. Traveling
-          to Latin America, living abroad in Eastern Europe, or roaming the foothills in Asia,
-          the goal in life is to be free and to leave your footmark in the family airloom.
-        </p>
-        <p className='text-center'>
-          Sadly, today many people fall into the 9-5 trap. They believe they need to work to 
-          have the coolest car, the biggest house, or the most unbelievable life. I know people with 
-          8-figures and I know people with $8 and unfortunately the underlying fallacy that lie with
-          each is that money somehow defines who we are. I disagree. The experience and mindset of an 
-          individual defines who they are. When I started this journey I had less than a $1,000 to my name.
-          The entire time I was mentally and morally rich though. I had bright thoughts, knew this wasn't the 
-          life I wanted to live, and made extreme sacrifices to build a platform to get on the path I am on.
-          Working numerous jobs simultaneously, taking 25 credits a quarter in college, and living off PB&J 
-          sandwiches for a year I learned how to concept of money. Money is nothing but a means to an end. To live
-          the Bromad lifestyle the main focal points needs to be how money works for you.
+          <strong className='text-left'>About the Bromad:</strong>{"  "}
+          Invest internationally. The United States is a legacy brand that is dying. One of the biggest market weaknesses today is the international market. The United States is bloated and overexpanded,
+          while there are many countries that are under utilized that will see exponential returns in the years to come. Sign up <a href='http://consulting.thebromad.com/' target="_blank" rel="noopener noreferrer">here</a> or visit my <a href='/blog'>blog</a> to learn more.
         </p>
         <br/>
         <Quote quote={"Go where you are treated best."}
           author={"Andrew Henderson - The Nomad Capitalist"}/>
         <br/>
+        <p className='text-center'>
+          There are a few maxims that I live by that perfectly sum who I am: 
+          <li><i>Diversify macroly, Focus microly.</i> This simply means on a large scale to diversify as much as possible. For me, I work many jobs, 
+          invest in many businesses, and start in many side projects. I am very diversified. However, for each individual facet, I hone in on and assure that everything
+          is done correctly. One thing I learned early on is that it sounds <i>cool</i> to be doing a lot of things, but if you don't focus on what you're 
+          doing, its going to hit you right in the face. 
+          </li>
+          <li><i>Invest in yourself.</i> The greatest returns I have seen is when I invested <i>100%</i> of everything into my self. Rather if thats 
+          by learning new crafts, starting businesses, or investing in real estate. If you have $1k, $10k, or $100k laying around. That money needs to 
+          go towards yourself ever before you invest it in stocks, other businesses, or anything you don't have control over.
+          </li>
+          <li><i>Always learn.</i> Through investing in yourself you will always learn. I advise to learn through action. For me, as I travel, always explore and meet new people
+          I am always learning. Though I might not always learn new formulas 
+          </li>
+        </p>
         <p className='text-center'>
           
         </p>
