@@ -3,6 +3,9 @@
   "homepage": ".",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
