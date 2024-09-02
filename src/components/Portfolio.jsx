@@ -11,22 +11,28 @@ import {
   MDBBtn,
   MDBCardFooter
 } from 'mdb-react-ui-kit';
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import InfoCard from './props/InfoCard';
 
-import ssk from "../utils/images/portfolio/ssk.png"
-import mollyshops from "../utils/images/portfolio/mollyshops.png"
-import homeplaceholder from "../utils/images/portfolio/homeplaceholder.png"
-import logoplaceholder from "../utils/images/portfolio/logoplaceholder.png"
+import mollyshops from "../utils/images/portfolio/mollyshops.png";
+import homeplaceholder from "../utils/images/portfolio/homeplaceholder.png";
+import logoplaceholder from "../utils/images/portfolio/logoplaceholder.png";
 import _821e56thst from "../utils/images/portfolio/821e56th.png";
-import _3132712thpls from "../utils/images/portfolio/3132712thpls.png"
-import _710111thsts from "../utils/images/portfolio/710111thsts.png"
-import _3907wildwoodvalleyct from "../utils/images/portfolio/3907wildwoodvalleyct.png"
+import _3132712thpls from "../utils/images/portfolio/3132712thpls.png";
+import _710111thsts from "../utils/images/portfolio/710111thsts.png";
+import _valledelmaiz from "../utils/images/portfolio/valledelmaiz.png";
+import _3907wildwoodvalleyct from "../utils/images/portfolio/3907wildwoodvalleyct.png";
 import _741625thsts from "../utils/images/portfolio/741625thstw.png";
-import zipprichcpas from "../utils/images/portfolio/zipprichcpas.png"
-import spotlesssquad from "../utils/images/portfolio/spotlesssquad.png"
+import zipprichcpas from "../utils/images/portfolio/zipprichcpas.png";
+import spotlesssquad from "../utils/images/portfolio/spotlesssquad.png";
 import wwwoa from "../utils/images/portfolio/wwwoa.png"
-import tacticaltrees from "../utils/images/portfolio/tacticaltrees.png"
+import tacticaltrees from "../utils/images/portfolio/tacticaltrees.png";
+import innocean from "../utils/images/portfolio/innocean.png";
+import certus from "../utils/images/portfolio/certus.png";
+import usdc from "../utils/images/portfolio/usdc.png";
+import circle from "../utils/images/portfolio/circle.png";
+import asc from "../utils/images/portfolio/asc.png";
+
 
 export default function Portfolio() {
   const [section, setSection] = React.useState("real estate");
@@ -57,40 +63,27 @@ export default function Portfolio() {
         location: "Houston, TX",
         src: _3907wildwoodvalleyct,
         year: "Purchased 2022"
-      }, 
+      },
       {
-        name: "multifamily house",
+        name: "single family house",
         location: "University Place, WA",
         src: _741625thsts,
         year: "Purchased 2022"
       },
       {
         name: "single family house",
+        location: "San Miguel De Allende, MX",
+        src: _valledelmaiz,
+        year: "Purchased 2023"
+      },
+      {
+        name: "single family house",
         location: "University Place, WA",
         src: homeplaceholder,
         year: "Coming soon..."
-      },
-      {
-        name: "condo",
-        location: "Mexico City, MX",
-        src: homeplaceholder,
-        year: "Coming soon..."
-      },
-      {
-        name: "resort",
-        location: "Malinalco, MX",
-        src: homeplaceholder,
-        year: "Coming soon..."
-      },
+      }
     ],
     "businesses": [
-      {
-        name: "Seven Sons Kitchen",
-        location: "Greater Seattle Area, WA",
-        src: ssk,
-        year: "2021",
-        link: "https://www.tacomasbestbbq.com"
-      },
       {
         name: "The Bromad - Consulting",
         location: "International",
@@ -107,100 +100,128 @@ export default function Portfolio() {
     ],
     "websites": [
       {
-        name: "Seven Sons Kitchen",
-        location: "Greater Seattle Area, WA",
-        src: ssk,
-        year: "2021",
-        link: "https://www.tacomasbestbbq.com"
-    },
+        name: "Circle Financial",
+        location: "International",
+        src: circle,
+        year: "2024",
+      },
+      {
+        name: "USDC",
+        location: "International",
+        src: usdc,
+        year: "2024",
+      },
+      {
+        name: "American Safety Council",
+        location: "United States",
+        src: asc,
+        year: "2023",
+      },
+      {
+        name: "Certus Holdings",
+        location: "United States",
+        src: certus,
+        year: "2023",
+      },
+      {
+        name: "Innocean",
+        location: "International",
+        src: innocean,
+        year: "2024",
+      },
       {
         name: "Zipprich CPAs",
         location: "International",
         src: zipprichcpas,
         year: "2022",
-    },
-    {
-      name: "Spotless Squad",
-      location: "Houston, TX",
-      src: spotlesssquad,
-      year: "2022"
-    },
-    {
-      name: "Zipprich Resorts",
-      location: "Puerto Vallarta, Jalisco, MX",
-      src: logoplaceholder,
-      year: "2021"
-    },
-    {
-      name: "Molly Hops",
-      location: "Tacoma, WA",
-      src: mollyshops,
-      year: "2021"
-    },
-    {
-      name: "WWWOA",
-      location: "Tacoma, WA",
-      src: wwwoa,
-      year: "2021"
-    },
-    {
-      name: "Tactical Trees",
-      location: "Houston, TX",
-      src: tacticaltrees,
-      year: "2022"
-    },
-    {
-      name: "Shield Pad",
-      location: "Houston, TX",
-      src: shieldpad,
-      year: "2022"
-    },
-    {
-      name: "Bromad Consulting",
-      location: "International",
-      src: logoplaceholder,
-      year: "2022"
-    }
-  ],
-  "tools": [
-    {
-      name: "Real Estate Procurement Calculator",
-      location: "mobile application",
-      src: logoplaceholder,
-      year: "$25 p/month or $200 lifetime license"
-    },
-    {
-      name: "Business Procurement Calculator",
-      location: "mobile application",
-      src: logoplaceholder,
-      year: "$25 p/month or $200 lifetime license"
-    },
-    {
-      name: "Cribbage AI Helper",
-      location: "mobile application",
-      src: logoplaceholder,
-      year: "$5 p/month or $50 lifetime license"
-    },
-    {
-      name: "Geocoordinate Distance Tracker API",
-      location: "online API",
-      src: logoplaceholder,
-      year: "-"
-    },
-    {
-      name: "MLB Tic-Tac-Toe Guesser",
-      location: "Free Online Guessing Game",
-      src: logoplaceholder,
-      year: "-"
-    },
-    {
-      name: "Shopify Analytics App",
-      location: "Hydrogen application, downloadable for enhanced ecommerce tracking",
-      src: logoplaceholder,
-      year: "Contact for more information."
-    },
-
-  ]
+      },
+      {
+        name: "Spotless Squad",
+        location: "Houston, TX",
+        src: spotlesssquad,
+        year: "2022"
+      },
+      {
+        name: "Zipprich Resorts",
+        location: "Puerto Vallarta, Jalisco, MX",
+        src: logoplaceholder,
+        year: "2021"
+      },
+      {
+        name: "Molly Hops",
+        location: "Tacoma, WA",
+        src: mollyshops,
+        year: "2021"
+      },
+      {
+        name: "WWWOA",
+        location: "Tacoma, WA",
+        src: wwwoa,
+        year: "2021"
+      },
+      {
+        name: "Tactical Trees",
+        location: "Houston, TX",
+        src: tacticaltrees,
+        year: "2022"
+      },
+      {
+        name: "Shield Pad",
+        location: "Houston, TX",
+        src: shieldpad,
+        year: "2022"
+      },
+      {
+        name: "Bromad Consulting",
+        location: "International",
+        src: logoplaceholder,
+        year: "2022"
+      }
+    ],
+    "tools": [
+      {
+        name: "Real Estate Procurement Calculator",
+        location: "mobile application",
+        src: logoplaceholder,
+        year: "-"
+      },
+      {
+        name: "Business Procurement Calculator",
+        location: "mobile application",
+        src: logoplaceholder,
+        year: "-"
+      },
+      {
+        name: "Cribbage AI Helper",
+        location: "mobile application",
+        src: logoplaceholder,
+        year: "-"
+      },
+      {
+        name: "Geocoordinate Distance Tracker API",
+        location: "online API",
+        src: logoplaceholder,
+        year: "-"
+      },
+      {
+        name: "MLB Tic-Tac-Toe Guesser",
+        location: "Free Online Guessing Game",
+        src: logoplaceholder,
+        year: "-"
+      },
+      {
+        name: "Shopify Analytics App",
+        location: "Shopify Theme Analytics developer, downloadable for enhanced ecommerce tracking",
+        src: logoplaceholder,
+        year: "-"
+      },
+      {
+        name: "Edge Analytics",
+        location: "Edge analytics, loading all analytical tools serverless via Cloudflare",
+        src: logoplaceholder,
+        year: "-"
+      }
+    ]
   }
   return (
     <MDBCard className='text-center mt-0'>
@@ -208,41 +229,41 @@ export default function Portfolio() {
         <MDBTabs className='card-header-tabs justify-content-center'>
           <MDBTabsItem>
             <MDBTabsLink active={
-                section === "real estate"
-              }
+              section === "real estate"
+            }
               onClick={
                 () => setSection("real estate")
-            }>
+              }>
               Real Estate
             </MDBTabsLink>
           </MDBTabsItem>
           <MDBTabsItem>
             <MDBTabsLink active={
-                section === "businesses"
-              }
+              section === "businesses"
+            }
               onClick={
                 () => setSection("businesses")
-            }>
+              }>
               Businesses
             </MDBTabsLink>
           </MDBTabsItem>
           <MDBTabsItem>
             <MDBTabsLink active={
-                section === "websites"
-              }
+              section === "websites"
+            }
               onClick={
                 () => setSection("websites")
-            }>
+              }>
               Websites and Consulting
             </MDBTabsLink>
           </MDBTabsItem>
           <MDBTabsItem>
             <MDBTabsLink active={
-                section === "tools"
-              }
+              section === "tools"
+            }
               onClick={
                 () => setSection("tools")
-            }>
+              }>
               Tools
             </MDBTabsLink>
           </MDBTabsItem>
@@ -273,7 +294,7 @@ export default function Portfolio() {
                   year={year}
                   name={name}
                   link={link}
-                  key={index}/>
+                  key={index} />
               )
             })
           } </Masonry>

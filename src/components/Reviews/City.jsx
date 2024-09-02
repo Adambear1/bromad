@@ -27,18 +27,63 @@ function City() {
     ];
     const cities = [
         {
+            name: "San Miguel De Allende",
+            attributes: ["expensive", "historic", "touristy", "food culture"],
+            description: "San Miguel De Allende is the heart of Mexico. Both physically and literally. Located in wine country only a few hours outside of Mexico City, Guadalajara, Leon, and Queretaro, it is quickly becoming one of the fastest growing cities in all of North America.",
+            photos: [""],
+            rating: 4,
+            pros: ["Historic", "Food", "Night Life", "Shopping", "Nature", "Culture"],
+            cons: ["Crowded", "Expensive"]
+        },
+        {
+            name: "Guanajuato",
+            attributes: ["affordable"],
+            description: "Major industrial town north of Mexico City. Its in the largest city in the state of Hidalgo sitting at the bottom of many mountains.",
+            photos: [""],
+            rating: 2,
+            pros: [""],
+            cons: ["Crowded", "Dirty"]
+        },
+        {
+            name: "Pechuca",
+            attributes: ["historic", "touristy"],
+            description: "Historic pueblo magico in the heart of Mexico. Only an hour outside of Leon, this is a tourist hotspot for all historic buildings and culture.",
+            photos: [""],
+            rating: 3,
+            pros: ["Historic", "Culture"],
+            cons: ["Crowded", "Dirty", "Traffic"]
+        },
+        {
+            name: "Leon",
+            attributes: ["historic"],
+            description: "Industrial metropolitan city in the state of Guanajuato. It is world renowned for its leather and manufactured goods. Great to go shopping there, not a place I would recommend to live.",
+            photos: [""],
+            rating: 2,
+            pros: ["Historic"],
+            cons: ["Crowded", "Dirty", "Traffic"]
+        },
+        {
+            name: "Santa Rosa De Lime",
+            attributes: ["historic", "tranquil", "nature driven"],
+            description: "Quiet town nestled in the mountains on Guanajuato. Perfect get away for camping and outdoor adventures.",
+            photos: [""],
+            rating: 3,
+            pros: ["Nature Driven", "Tranquil", "Quaint"],
+            cons: []
+        },
+        {
             name: "Mexico City",
             attributes: ["expensive", "historic", "touristy", "adventurous", "food culture", "night life"],
             description: "Mexico is absolutely unbelievable. I think its a place everyone needs to visit at least once. Food galore, endless parks, and history at every foot step. With it being one of the largest cities in the world it does come with its downfalls-- noise, traffic, and construction-- however, the trade off is totally worth it. You can order $100 USD plates per meal, or order .50c tacos on the same block. You have ritzy skyscrapers and smaller bodegas and lofts. If you go to visit, bring your best walking shoes because you're going to be walking from sunrise to past sun down. Not once did I feel unsafe or uncomfortable, instead quite the opposite. There were times I got hungry 10PM, 11PM at night, walked down to the nearest taco stand, had to wait 30 minutes to place an order, met new friends and had some of the best tacos ever. The city truly never sleeps.",
             photos: [""],
-            rating: 5,
+            rating: 4,
             pros: ["Historic", "Food", "Night Life", "Shopping", "Nature", "Culture"],
             cons: ["Crowded", "Expensive", "Traffic", "Construction"]
         },
         {
             name: "Bacalar",
             attributes: ["nature driven", "affordable", "tranquil", "adventurous"],
-            description: "A description of Bacalr.",
+            description: "The 'Maldives of Mexico' is known for its light blue lagoon and tranquil city. Located in the fast south east border of Mexico near Belize, it is difficult to get to, but easy to stay at. Would recommend to experience at least once.",
             rating: 4,
             pros: ["Nature", "Beautiful", "Affordable", "Quaint", "Tranquil"],
             cons: ["Under Developed", "Small", "Location"]
@@ -92,6 +137,14 @@ function City() {
             cons: ["Dirty", "Overcrowded", "Expensive"]
         },
         {
+            name: "Mineral Del Chico",
+            attributes: ["affordable", "nature driven", "tranquil", "food culture"],
+            description: "Beautiful mountain town in the heart of Hidalgo. Very quiet town where most things are only open on the weekend. There's no grocery store or gas station within an hours drive of there. Perfect to get away for peace and quiet and to be one with nature.",
+            rating: 4,
+            pros: ["affordable", "nature driven", "tranquil", "food culture"],
+            cons: ["Isolated"]
+        },
+        {
             name: "Puerto Vallarta",
             attributes: ["touristy", "adventurous"],
             description: "A description of Puerto Vallarta.",
@@ -126,7 +179,7 @@ function City() {
     ]
     return (
         <>
-            <div className="container my-2">
+            <div className="container my-2" onClick={()=>setShow(false)}>
                 <h1 className='text-center'>CITY REVIEWS</h1>
                 <div className='text-center'>
                     <ResponsiveMasonry columnsCountBreakPoints={
@@ -141,11 +194,10 @@ function City() {
                         }
                         </Masonry>
                     </ResponsiveMasonry>
-                    <Toast styles="m-2 border border-dark w-100" text={selected === "View All" ? "Clear All" : "View All"} _c={"light"} populate={selected === "View All" ? ()=>setSelected("") : showRelated} />
+                    <Toast styles="m-2 border border-dark w-100" text={selected === "View All" ? "Clear All" : "View All"} _c={"light"} populate={selected === "View All" ? () => setSelected("") : showRelated} />
                 </div>
             </div>
             <div className="container my-5 ">
-
                 <div className='text-center'>
                     <h1>{titleCase(selected)}</h1>
                     {
