@@ -98,7 +98,7 @@ export default function Portfolio() {
         year: "2022",
       }
     ],
-    "websites": [
+    "consulting": [
       {
         name: "Circle Financial",
         location: "International",
@@ -249,10 +249,10 @@ export default function Portfolio() {
           </MDBTabsItem>
           <MDBTabsItem>
             <MDBTabsLink active={
-              section === "websites"
+              section === "consulting"
             }
               onClick={
-                () => setSection("websites")
+                () => setSection("consulting")
               }>
               Websites and Consulting
             </MDBTabsLink>

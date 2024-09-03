@@ -2,18 +2,18 @@ import React from 'react'
 import Card from './props/Card'
 import Modal from "./props/Modal"
 
+import desertSunset from "../utils/all_other_photos/desert.png";
+import mountains from "../utils/all_other_photos/mountains.png";
+import wine from "../utils/all_other_photos/wine.png";
+import coding from "../utils/all_other_photos/coding.png";
+import ocean from "../utils/all_other_photos/ocean.png";
+import building from "../utils/all_other_photos/building.png";
+import jungle from "../utils/all_other_photos/jungle.png";
+import coffee from "../utils/all_other_photos/coffee.png";
+
 function Home() {
   const [show, setShow] = React.useState(false);
   const [index, setIndex] = React.useState();
-  const desertSunset = "https://images.pexels.com/photos/36744/agriculture-arable-clouds-countryside.jpg?auto=compress&cs=tinysrgb&w=1600";
-  const wine = "https://images.pexels.com/photos/39351/purple-grapes-vineyard-napa-valley-napa-vineyard-39351.jpeg?auto=compress&cs=tinysrgb&w=1600";
-  const mountains = "https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&w=1600";
-  const coding = "https://images.pexels.com/photos/4974912/pexels-photo-4974912.jpeg?auto=compress&cs=tinysrgb&w=1600";
-  const ocean = "https://images.pexels.com/photos/9499007/pexels-photo-9499007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-  const building = "https://images.pexels.com/photos/3700245/pexels-photo-3700245.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-  const jungle = "https://images.pexels.com/photos/12316620/pexels-photo-12316620.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
-  const coffee = "https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-
   const cards = [
     {
       src: desertSunset,
@@ -60,10 +60,10 @@ function Home() {
             src,
             content,
             info
-          }, i) => <div className="col-12 col-sm-3 mt-1 p-1">
+          }, index) => <div className="col-12 col-sm-3 mt-1 p-1" key={index}>
             <Card src={src}
               content={content}
-              key={i}
+              key={index}
               cta={
                 () => {
                   // setIndex(i);
@@ -79,7 +79,8 @@ function Home() {
               cards[index].info
             }
             show={show}
-            setShow={setShow}/>
+            setShow={setShow}
+            key={Math.random()}/>
           }
         </div>
       </div>

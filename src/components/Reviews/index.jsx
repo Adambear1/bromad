@@ -8,9 +8,9 @@ import Drink from './Drink';
 function Reviews() {
     const [focus, setFocus] = React.useState(false);
     const _component = {
-        city: <City/>,
-        food: <Food/>,
-        drink: <Drink/>
+        city: <City />,
+        food: <Food />,
+        drink: <Drink />
     }
     return (
         <>
@@ -24,7 +24,7 @@ function Reviews() {
                         }
                     }>
                         <Masonry> {
-                            ["City", "Food", "Drink"].map((text) => <Toast styles="m-2 border border-dark" text={text} _c="light" populate={()=>setFocus(text.toLowerCase())} />)
+                            ["City", "Food", "Drink"].map((text, index) => <Toast styles="m-2 border border-dark" text={text} _c="light" populate={() => setFocus(text.toLowerCase())} key={index} />)
                         }
                         </Masonry>
                     </ResponsiveMasonry>

@@ -8,7 +8,8 @@ export default function Card({src, content, name, cta, pointer}) {
       {src && <MDBCardImage src={src}
         style={
           {
-            maxHeight: "200px",
+            maxHeight: "129px",
+            minWidth: "172px",
             objectFit: "cover"
           }
         }

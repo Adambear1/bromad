@@ -1,15 +1,14 @@
 import React from 'react';
-import {MDBContainer, MDBNavbar, MDBNavbarBrand} from 'mdb-react-ui-kit';
+import { MDBContainer, MDBNavbar, MDBNavbarBrand } from 'mdb-react-ui-kit';
 
-export default function TopNavbar({cta}) {
+export default function TopNavbar({ cta }) {
   return (
     <>
-      <MDBNavbar light bgColor='light' center className='justify-content-center' onClick={cta}>
+      <MDBNavbar light bgColor='light' center="true" className='justify-content-center' onClick={cta}>
         <MDBContainer fluid center
-          fullWidth={false}
           className='justify-content-center'>
-          <MDBNavbarBrand href='#' center
-            fullWidth={false}
+          <MDBNavbarBrand center
+            disabled={true}
             className='justify-content-center'>
             🏄‍♂️ The Bromad 🏡
           </MDBNavbarBrand>

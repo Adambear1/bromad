@@ -179,7 +179,7 @@ function City() {
     ]
     return (
         <>
-            <div className="container my-2" onClick={()=>setShow(false)}>
+            <div className="container my-2" onClick={() => setShow(false)}>
                 <h1 className='text-center'>CITY REVIEWS</h1>
                 <div className='text-center'>
                     <ResponsiveMasonry columnsCountBreakPoints={
@@ -190,7 +190,7 @@ function City() {
                         }
                     }>
                         <Masonry> {
-                            categories.map(({ text, color }) => <Toast styles="m-2 border border-secondary" text={text} _c={color} populate={showRelated} />)
+                            categories.map(({ text, color }, index) => <Toast styles="m-2 border border-secondary" text={text} _c={color} populate={showRelated} key={index} />)
                         }
                         </Masonry>
                     </ResponsiveMasonry>
@@ -201,12 +201,14 @@ function City() {
                 <div className='text-center'>
                     <h1>{titleCase(selected)}</h1>
                     {
-                        cities.filter((city) => selected === "View All" ? true : city.attributes.includes(selected)).sort((a, b) => a.name.localeCompare(b.name)).map(({ name, attributes, description, photos, rating, pros, cons }) =>
+                        cities.filter((city) => selected === "View All" ? true : city.attributes.includes(selected)).sort((a, b) => a.name.localeCompare(b.name)).map(({ name, attributes, description, photos, rating, pros, cons }, index) =>
                             <>
-                                <Card name={titleCase(name)} cta={() => {
-                                    setSelectedCity({ name, attributes, description, photos, rating, pros, cons })
-                                    setShow(true)
-                                }}
+                                <Card name={titleCase(name)}
+                                    key={index}
+                                    cta={() => {
+                                        setSelectedCity({ name, attributes, description, photos, rating, pros, cons })
+                                        setShow(true)
+                                    }}
                                     pointer={true}
                                 />
 
@@ -226,21 +228,21 @@ function City() {
                     }
                         info={
                             <>
-                                {Array(selectedCity.rating).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={ind} icon={faStar} color='orange' />)}
-                                {Array(Math.abs(selectedCity.rating - 5)).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={ind} icon={faStar} color='light-gray' />)}
+                                {Array(selectedCity.rating).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={index} icon={faStar} color='orange' />)}
+                                {Array(Math.abs(selectedCity.rating - 5)).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={index} icon={faStar} color='light-gray' />)}
                                 <p>
                                     {selectedCity.description}
                                 </p>
                                 <br />
                                 <br />
                                 <p>
-                                    <b>Pros: </b>{selectedCity.pros.map(pro =>
-                                        <Toast styles="m-1" _c={"light_blue"} text={pro} disabled={true} />
+                                    <b>Pros: </b>{selectedCity.pros.map((pro, index) =>
+                                        <Toast styles="m-1" _c={"light_blue"} text={pro} disabled={true} key={index}/>
                                     )}
                                     <br />
                                     <br />
-                                    <b>Cons: </b> {selectedCity.cons.map(con =>
-                                        <Toast styles="m-1" _c={"black"} text={con} disabled={true} />
+                                    <b>Cons: </b> {selectedCity.cons.map((con, index) =>
+                                        <Toast styles="m-1" _c={"black"} text={con} disabled={true} key={index} />
                                     )}
                                 </p></>
                         }

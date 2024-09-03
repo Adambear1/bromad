@@ -43,9 +43,9 @@ function App() {
         <Navbar page={page}
           setPage={setPage} />
       </header>
-      <body> {
+      <div> {
         _component[page]
-      } </body>
+      } </div>
       <footer>
         <Footer />
       </footer>

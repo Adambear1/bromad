@@ -86,7 +86,7 @@ function Drink() {
                         }
                     }>
                         <Masonry> {
-                            categories.map(({ text, color }) => <Toast styles="m-2 border border-secondary" text={text} _c={color} populate={showRelated} />)
+                            categories.map(({ text, color }, index) => <Toast styles="m-2 border border-secondary" text={text} _c={color} populate={showRelated} key={index} />)
                         }
                         </Masonry>
                     </ResponsiveMasonry>
@@ -98,15 +98,15 @@ function Drink() {
                 <div className='text-center'>
                     <h1>{titleCase(selected)}</h1>
                     {
-                        reviews.filter((review) => selected === "View All" ? true : review.attributes.includes(selected)).sort((a, b) => a.name.localeCompare(b.name)).map(({ name, attributes, description, photos, rating, pros, cons }) =>
-                            <>
-                                <Card name={titleCase(name)} cta={() => {
+                        reviews.filter((review) => selected === "View All" ? true : review.attributes.includes(selected)).sort((a, b) => a.name.localeCompare(b.name)).map(({ name, attributes, description, photos, rating, pros, cons }, index) =>
+                            <Card
+                                key={index}
+                                name={titleCase(name)} cta={() => {
                                     setSelectedReview({ name, attributes, description, photos, rating, pros, cons })
                                     setShow(true)
                                 }}
-                                    pointer={true}
-                                />
-                            </>
+                                pointer={true}
+                            />
                         )
 
                     }
@@ -122,8 +122,8 @@ function Drink() {
                     }
                         info={
                             <>
-                                {Array(selectedReview.rating).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={ind} icon={faStar} color='orange' />)}
-                                {Array(Math.abs(selectedReview.rating - 5)).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={ind} icon={faStar} color='light-gray' />)}
+                                {Array(selectedReview.rating).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={index} icon={faStar} color='orange' />)}
+                                {Array(Math.abs(selectedReview.rating - 5)).fill(0).map((_, i) => i + 1).map((ind, index) => <FontAwesomeIcon key={index} icon={faStar} color='light-gray' />)}
                                 <p>
                                     {selectedReview.description}
                                 </p>
