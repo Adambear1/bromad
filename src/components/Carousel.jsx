@@ -37,11 +37,11 @@ export default function Carousel() {
       {
         items.map(({ src, label_text, description_text }, index) => < MDBCarouselItem
           className='w-100 d-block'
-          itemId={index}
+          itemId={index + 1}
           key={index}
           src={src}
           style={{ maxHeight: "600px", width: "100%", objectFit: "cover" }}
-          alt={"..."}
+          alt="..."
         >
           <h5>{label_text}</h5>
           <p>{description_text}</p>

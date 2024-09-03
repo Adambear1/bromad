@@ -32,10 +32,9 @@ function App() {
     <>
       <header>
         <TopNavbar cta={() => {
-          let cI = currentIndex
+          let cI = currentIndex;
           setCurrentIndex(cI += 1);
-          console.log(currentIndex);
-          if(currentIndex === 5){setCurrentIndex(0)}
+          if(currentIndex === page_array.length + 1){setCurrentIndex(0)};
           setPage(page_array[currentIndex]);
         }
           } />
