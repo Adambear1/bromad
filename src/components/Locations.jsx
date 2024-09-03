@@ -1,10 +1,8 @@
 import React from 'react'
-import Masonry, {ResponsiveMasonry} from 'react-responsive-masonry';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 // import Card from './props/Card';
 import InfoCard from './props/InfoCard';
-import seattle from "../utils/images/seattle.png";
 import puertovallarta from "../utils/images/puertovallarta.png";
-import houston from "../utils/images/houston.png";
 import queretaro from "../utils/images/queretaro.png";
 import valledebravo from "../utils/images/valledebravo.png";
 import malinalco from "../utils/images/malinalco.png";
@@ -15,9 +13,6 @@ import morelia from "../utils/images/morelia.png";
 import patzcuaro from "../utils/images/patzcuaro.png";
 import zirahuen from "../utils/images/zirahuen.png";
 import puertorico from "../utils/images/puertorico.png";
-import kansascity from "../utils/images/kansascity.png";
-import orlando from "../utils/images/orlando.png";
-import phoenix from "../utils/images/phoenix.png";
 import monterrey from "../utils/images/monterrey.png";
 import tulum from "../utils/images/tulum.png";
 import taxco from "../utils/images/taxco.png";
@@ -26,23 +21,21 @@ import kualalumpur from "../utils/images/kualalumpur.png";
 import bogota from "../utils/images/bogota.png";
 import chiapas from "../utils/images/chiapas.png";
 import sma from "../utils/images/sma.png";
+import mineraldelchico from "../utils/images/mineraldelchico.png";
+import leon from "../utils/images/leon.png";
+import guanajuato from "../utils/images/guanajuato.png";
+import medellin from "../utils/images/medellin.png";
+import bariloche from "../utils/images/bariloche.png";
+import buenasaires from "../utils/images/buenasaires.png";
+import porto from "../utils/images/porto.png";
 
 function Locations() {
   const visited = [
-    // {
-    //   name: "Seattle, WA, USA",
-    //   src: seattle,
-    //   content: "The beautiful PNW. Able to make the most of the mountains, water and scenery."
-    // },
     {
       name: "Puerto Vallarta, Jalisco, MX",
       src: puertovallarta,
       content: "Tropical paradise. Beautiful, great weather, people and overall location. Very affordable, even for being a tourist trap."
     },
-    // {
-    //   name: "Houston, TX, USA",
-    //   src: houston
-    // },
     {
       name: "Querétaro, Estado de México, MX",
       src: queretaro
@@ -50,7 +43,7 @@ function Locations() {
       name: "Guadalajara, Jalisco, MX",
       src: guadalajara
     }, {
-      name: "Valle de Bravo, Jalisco, MX",
+      name: "Valle de Bravo, Estado de México, MX",
       src: valledebravo
     },
     {
@@ -82,25 +75,25 @@ function Locations() {
       src: zirahuen
     },
     {
-      name: "Kansas City, Missouri, USA",
-      src: kansascity
+      name: "Mineral Del Chico, Hidalgo, MX",
+      src: mineraldelchico
+    },
+    {
+      name: "Leon, Guanajuato, MX",
+      src: leon
+    },
+    {
+      name: "Guanajuato City, Guanajuato, MX",
+      src: guanajuato
     },
     {
       name: "Puerto Rico",
       src: puertorico
     },
-    // {
-    //   name: "Phoenix, Arizona, USA",
-    //   src: phoenix
-    // },
-    // {
-    //   name: "Orlando, Florida, USA",
-    //   src: orlando
-    // },
     {
       name: "Tepotzotlán, Estado de México, MX",
       src: tepotzotlan
-    }, 
+    },
     {
       name: "Monterrey, Nuevo Leon, MX",
       src: monterrey
@@ -124,15 +117,31 @@ function Locations() {
       src: bogota
     },
     {
-      name: "Chiapas, Oxaca, Mexico",
+      name: "Medellin, Columbia",
+      src: medellin
+    },
+    {
+      name: "Bariloche, Argentina",
+      src: bariloche
+    },
+    {
+      name: "Buenas Aires, Argentina",
+      src: buenasaires
+    },
+    {
+      name: "Chiapas, Oaxaca, Mexico",
       src: chiapas
+    },
+    {
+      name: "Porto, Portugal",
+      src: porto
     }
   ]
   return (
     <>
       <div className="container">
         <div className="row">
-          <div className="h1">Locations Visited</div>
+          <div className="h1 center text-center align-center">Locations Visited</div>
           <ResponsiveMasonry columnsCountBreakPoints={
             {
               350: 1,
@@ -147,12 +156,12 @@ function Locations() {
               }, index) => <InfoCard name={name}
                 src={src}
                 key={index}
-                className="p-1 m-1"/>)
+                className="p-1 m-1" />)
             } </Masonry>
           </ResponsiveMasonry>
         </div>
         <div className="row">
-          <div className="h1">Locations To Be Visited Soon...</div>
+          <div className="h1 center text-center align-center">Locations To Be Visited Soon...</div>
           <ResponsiveMasonry columnsCountBreakPoints={
             {
               350: 1,
@@ -164,11 +173,11 @@ function Locations() {
               toVisit.map(({
                 name,
                 src,
-              }, index) => 
-              <InfoCard name={name}
-                src={src}
-                key={index}
-                className="p-2 m-2"/>)
+              }, index) =>
+                <InfoCard name={name}
+                  src={src}
+                  key={index}
+                  className="p-2 m-2" />)
             } </Masonry>
           </ResponsiveMasonry>
         </div>

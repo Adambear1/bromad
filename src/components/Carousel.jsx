@@ -33,7 +33,7 @@ export default function Carousel() {
     }
   ]
   return (
-    <MDBCarousel showIndicators={true} showControls={true} fade={true}>
+    <MDBCarousel showIndicators={true} showControls={true} fade={true} touch={true}>
       {
         items.map(({ src, label_text, description_text }, index) => < MDBCarouselItem
           className='w-100 d-block'
@@ -44,7 +44,9 @@ export default function Carousel() {
           alt="..."
         >
           <h5>{label_text}</h5>
-          <p>{description_text}</p>
+          <p 
+          // style={{backgroundColor: "white", opacity: "50%", color: "black", borderRadius: "5%", border: "2px"}}
+          >{description_text}</p>
         </MDBCarouselItem>)
       }
 
