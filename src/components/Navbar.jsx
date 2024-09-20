@@ -22,7 +22,6 @@ export default function Navbar({ page, setPage }) {
                   </MDBNavbarLink>
                 </MDBNavbarItem>)
             }
-
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBContainer>
