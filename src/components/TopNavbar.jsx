@@ -8,10 +8,10 @@ export default function TopNavbar() {
         <MDBContainer fluid>
           <MDBNavbarBrand>🏄‍♂️ The Bromad 🌴</MDBNavbarBrand>
           <MDBInputGroup className='d-flex w-auto'>
-            <MDBBtn className='mx-3' color='white'>Consulting</MDBBtn>
-            <MDBBtn className='mx-3' color='primary'>Products</MDBBtn>
+            <MDBBtn className='' color='white' href='https://consult.thebromad.com'>Consulting</MDBBtn>
+            <MDBBtn className='' color='primary' href='https://shop.thebromad.com'>Products</MDBBtn>
           </MDBInputGroup>
-          <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
+          <MDBInputGroup tag="form" className='d-flex w-auto'>
             <input className='form-control' placeholder="Newsletter" aria-label="Search" type='Search' />
             <MDBBtn outline>Subscribe</MDBBtn>
           </MDBInputGroup>
