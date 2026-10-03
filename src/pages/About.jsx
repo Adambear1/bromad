@@ -106,7 +106,7 @@ export default function About() {
       <section className="section">
         <SectionTitle title="Real estate" />
         <p className="muted" style={{ marginBottom: 20, maxWidth: 640 }}>
-          Properties I've invested in across the Pacific Northwest, Texas and central Mexico.
+          Properties I've invested in across Washington, Nevada, Texas and central Mexico.
         </p>
         <div className="tiles">
           {realEstate.map((r, i) => (

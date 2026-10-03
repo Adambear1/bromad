@@ -22,7 +22,7 @@ const profile = {
   bio: [
     "I'm a web analytics engineer. For more than five years I've implemented, audited and maintained tracking for over a hundred websites — Google Tag Manager, GA4, server-side tagging, ad conversion APIs, consent management and attribution. Through Precision Web Analytics I help businesses get to data they can actually trust.",
     "That work keeps pointing me at problems worth building for. So I build: tools that check what tracking really fires, products that measure how AI models talk about a brand, schema tooling that deploys its own fixes, and a handful of apps for my own investing, learning and travel.",
-    "Outside of code I invest in real estate in Washington, Texas and Mexico, and spend as much time as I can on the road across Latin America.",
+    "Outside of code I invest in real estate in Washington, Nevada, Texas and Mexico, and spend as much time as I can on the road across Latin America.",
   ],
   skills: [
     {
