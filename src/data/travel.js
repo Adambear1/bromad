@@ -11,31 +11,47 @@ import zirahuen from "../assets/places/zirahuen.jpg";
 import puertorico from "../assets/places/puertorico.jpg";
 import monterrey from "../assets/places/monterrey.jpg";
 import tulum from "../assets/places/tulum.jpg";
-import taxco from "../assets/places/taxco.jpg";
 import tepotzotlan from "../assets/places/tepotzotlan.jpg";
-import kualalumpur from "../assets/places/kualalumpur.jpg";
-import bogota from "../assets/places/bogota.jpg";
-import chiapas from "../assets/places/chiapas.jpg";
 import sma from "../assets/places/sma.jpg";
 import mineraldelchico from "../assets/places/mineraldelchico.jpg";
 import leon from "../assets/places/leon.jpg";
 import guanajuato from "../assets/places/guanajuato.jpg";
-import medellin from "../assets/places/medellin.jpg";
 import bariloche from "../assets/places/bariloche.jpg";
 import buenosaires from "../assets/places/buenosaires.jpg";
-import porto from "../assets/places/porto.jpg";
+import santarosadelima from "../assets/places/santarosadelima.jpg";
+import pachuca from "../assets/places/pachuca.jpg";
+import playadelcarmen from "../assets/places/playadelcarmen.jpg";
+import cancun from "../assets/places/cancun.jpg";
+import mendoza from "../assets/places/mendoza.jpg";
+import cordoba from "../assets/places/cordoba.jpg";
+import lacumbrecita from "../assets/places/lacumbrecita.jpg";
+import lacumbre from "../assets/places/lacumbre.jpg";
+import santiago from "../assets/places/santiago.jpg";
+import lima from "../assets/places/lima.jpg";
+import sanjose from "../assets/places/sanjose.jpg";
+import atenas from "../assets/places/atenas.jpg";
+import quepos from "../assets/places/quepos.jpg";
+import rivas from "../assets/places/rivas.jpg";
+import knysna from "../assets/places/knysna.jpg";
+import plettenbergbay from "../assets/places/plettenbergbay.jpg";
+import tsitsikamma from "../assets/places/tsitsikamma.jpg";
+import swellendam from "../assets/places/swellendam.jpg";
+import hermanus from "../assets/places/hermanus.jpg";
+import franschhoek from "../assets/places/franschhoek.jpg";
+import stellenbosch from "../assets/places/stellenbosch.jpg";
+import capetown from "../assets/places/capetown.jpg";
+import mazamitla from "../assets/places/mazamitla.jpg";
 
-export const flags = {
-  Mexico: "🇲🇽",
-  Argentina: "🇦🇷",
-  Chile: "🇨🇱",
-  Peru: "🇵🇪",
-  "Costa Rica": "🇨🇷",
-  "Puerto Rico": "🇵🇷",
-  Portugal: "🇵🇹",
-  Colombia: "🇨🇴",
-  Malaysia: "🇲🇾",
+export const countryInfo = {
+  Mexico: { flag: "🇲🇽", continent: "North America" },
+  "Puerto Rico": { flag: "🇵🇷", continent: "North America" },
+  "Costa Rica": { flag: "🇨🇷", continent: "North America" },
+  Argentina: { flag: "🇦🇷", continent: "South America" },
+  Chile: { flag: "🇨🇱", continent: "South America" },
+  Peru: { flag: "🇵🇪", continent: "South America" },
+  "South Africa": { flag: "🇿🇦", continent: "Africa" },
 };
+export const flags = Object.fromEntries(Object.entries(countryInfo).map(([c, i]) => [c, i.flag]));
 
 export const vibes = [
   "affordable",
@@ -211,10 +227,22 @@ export const visited = [
     cons: ["Food", "Dirty", "Poor"],
   },
   {
+    name: "Mazamitla",
+    region: "Jalisco",
+    country: "Mexico",
+    coords: [-103.02, 19.92],
+    image: mazamitla,
+    rating: 4,
+    vibes: ["tranquil", "nature driven", "food culture"],
+    review:
+      "A pueblo mágico in the pine-covered mountains of southern Jalisco — log cabins, cool air and forest trails, often called the Switzerland of Mexico.",
+  },
+  {
     name: "Santa Rosa de Lima",
     region: "Guanajuato",
     country: "Mexico",
     coords: [-101.2, 21.08],
+    image: santarosadelima,
     rating: 3,
     vibes: ["historic", "tranquil", "nature driven"],
     review:
@@ -252,6 +280,7 @@ export const visited = [
     region: "Hidalgo",
     country: "Mexico",
     coords: [-98.76, 20.1],
+    image: pachuca,
     rating: 2,
     vibes: ["affordable"],
     review:
@@ -263,6 +292,7 @@ export const visited = [
     region: "Quintana Roo",
     country: "Mexico",
     coords: [-87.08, 20.63],
+    image: playadelcarmen,
     rating: 2,
     vibes: ["expensive", "touristy", "night life"],
     pros: ["Location", "Food culture"],
@@ -273,6 +303,7 @@ export const visited = [
     region: "Quintana Roo",
     country: "Mexico",
     coords: [-86.85, 21.16],
+    image: cancun,
     rating: 1,
     vibes: ["expensive", "touristy", "night life"],
     review:
@@ -314,6 +345,7 @@ export const visited = [
     region: "Mendoza",
     country: "Argentina",
     coords: [-68.84, -32.89],
+    image: mendoza,
     rating: 4,
     vibes: ["food culture", "nature driven"],
     review: "Argentina's wine capital in the shadow of the Andes, best known for its Malbec.",
@@ -323,6 +355,7 @@ export const visited = [
     region: "Córdoba",
     country: "Argentina",
     coords: [-64.18, -31.42],
+    image: cordoba,
     rating: 3,
     vibes: ["historic", "affordable", "night life"],
     review: "Argentina's second city — a university town with a historic Jesuit centre and a young, lively feel.",
@@ -332,6 +365,7 @@ export const visited = [
     region: "Córdoba",
     country: "Argentina",
     coords: [-64.77, -31.9],
+    image: lacumbrecita,
     rating: 4,
     vibes: ["tranquil", "nature driven"],
     review: "A tiny, pedestrian-only alpine village in the Córdoba hills, set among pine forests, streams and waterfalls.",
@@ -341,6 +375,7 @@ export const visited = [
     region: "Córdoba",
     country: "Argentina",
     coords: [-64.49, -30.98],
+    image: lacumbre,
     rating: 3,
     vibes: ["tranquil", "nature driven"],
     review: "A quiet mountain town in the Punilla Valley of the Córdoba sierras.",
@@ -351,6 +386,7 @@ export const visited = [
     name: "Santiago",
     country: "Chile",
     coords: [-70.67, -33.45],
+    image: santiago,
     rating: 3,
     vibes: ["expensive", "food culture"],
     review: "Chile's capital, ringed by the Andes, with vineyards a short drive out of the city.",
@@ -359,6 +395,7 @@ export const visited = [
     name: "Lima",
     country: "Peru",
     coords: [-77.04, -12.05],
+    image: lima,
     rating: 4,
     vibes: ["food culture", "historic"],
     review: "A clifftop capital on the Pacific and one of the great food cities of the world.",
@@ -369,6 +406,7 @@ export const visited = [
     name: "San José",
     country: "Costa Rica",
     coords: [-84.08, 9.93],
+    image: sanjose,
     rating: 3,
     vibes: ["affordable"],
     review: "Costa Rica's capital up in the Central Valley — the hub for getting everywhere else in the country.",
@@ -378,6 +416,7 @@ export const visited = [
     region: "Alajuela",
     country: "Costa Rica",
     coords: [-84.38, 9.98],
+    image: atenas,
     rating: 4,
     vibes: ["tranquil", "nature driven"],
     review: "A relaxed hillside town in the Central Valley, known for its mild year-round climate.",
@@ -387,6 +426,7 @@ export const visited = [
     region: "Puntarenas",
     country: "Costa Rica",
     coords: [-84.16, 9.43],
+    image: quepos,
     rating: 4,
     vibes: ["nature driven", "adventurous"],
     review: "Pacific beach town and the gateway to Manuel Antonio National Park — jungle, monkeys and beaches.",
@@ -396,17 +436,92 @@ export const visited = [
     region: "Pérez Zeledón",
     country: "Costa Rica",
     coords: [-83.63, 9.42],
+    image: rivas,
     rating: 4,
     vibes: ["tranquil", "nature driven", "adventurous"],
     review: "A mountain village in the Chirripó River valley, on the way up to Costa Rica's highest peak.",
   },
+
+  // ---------- South Africa ----------
+  {
+    name: "Cape Town",
+    region: "Western Cape",
+    country: "South Africa",
+    coords: [18.42, -33.92],
+    image: capetown,
+    rating: 5,
+    vibes: ["nature driven", "adventurous", "food culture", "night life"],
+    review: "Table Mountain over the city, beaches on two oceans and the winelands an hour away.",
+  },
+  {
+    name: "Stellenbosch",
+    region: "Western Cape",
+    country: "South Africa",
+    coords: [18.86, -33.93],
+    image: stellenbosch,
+    rating: 4,
+    vibes: ["historic", "food culture"],
+    review: "An oak-lined university town at the heart of the Cape Winelands, surrounded by vineyards.",
+  },
+  {
+    name: "Franschhoek",
+    region: "Western Cape",
+    country: "South Africa",
+    coords: [19.12, -33.91],
+    image: franschhoek,
+    rating: 4,
+    vibes: ["food culture", "tranquil", "expensive"],
+    review: "A small valley town founded by French Huguenots, now known for its wine estates and restaurants.",
+  },
+  {
+    name: "Hermanus",
+    region: "Western Cape",
+    country: "South Africa",
+    coords: [19.23, -34.42],
+    image: hermanus,
+    rating: 4,
+    vibes: ["nature driven", "tranquil"],
+    review: "A clifftop seaside town famous for land-based whale watching in Walker Bay.",
+  },
+  {
+    name: "Swellendam",
+    region: "Western Cape",
+    country: "South Africa",
+    coords: [20.44, -34.02],
+    image: swellendam,
+    rating: 4,
+    vibes: ["historic", "tranquil"],
+    review: "One of South Africa's oldest towns, with Cape Dutch architecture beneath the Langeberg mountains.",
+  },
+  {
+    name: "Knysna",
+    region: "Western Cape",
+    country: "South Africa",
+    coords: [23.05, -34.04],
+    image: knysna,
+    rating: 4,
+    vibes: ["nature driven", "tranquil"],
+    review: "A Garden Route town on a lagoon guarded by the Knysna Heads, backed by indigenous forest.",
+  },
+  {
+    name: "Plettenberg Bay",
+    region: "Western Cape",
+    country: "South Africa",
+    coords: [23.37, -34.05],
+    image: plettenbergbay,
+    rating: 4,
+    vibes: ["nature driven", "touristy"],
+    review: "Long golden beaches on the Garden Route, with dolphins and seasonal whales offshore.",
+  },
+  {
+    name: "Tsitsikamma",
+    region: "Eastern Cape",
+    country: "South Africa",
+    coords: [23.9, -34.02],
+    image: tsitsikamma,
+    rating: 4,
+    vibes: ["nature driven", "adventurous"],
+    review: "Coastal national park of forest, cliffs and the Storms River Mouth suspension bridge.",
+  },
 ];
 
-export const bucketList = [
-  { name: "Porto", country: "Portugal", coords: [-8.61, 41.15], image: porto },
-  { name: "Medellín", country: "Colombia", coords: [-75.58, 6.24], image: medellin },
-  { name: "Bogotá", country: "Colombia", coords: [-74.07, 4.71], image: bogota },
-  { name: "Kuala Lumpur", country: "Malaysia", coords: [101.69, 3.14], image: kualalumpur },
-  { name: "Chiapas", country: "Mexico", coords: [-92.64, 16.74], image: chiapas },
-  { name: "Taxco", region: "Guerrero", country: "Mexico", coords: [-99.6, 18.56], image: taxco },
-];

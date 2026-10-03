@@ -4,7 +4,6 @@ import _710111thsts from "../assets/real-estate/710111thsts.jpg";
 import _3907wildwoodvalleyct from "../assets/real-estate/3907wildwoodvalleyct.jpg";
 import _741625thstw from "../assets/real-estate/741625thstw.jpg";
 import valledelmaiz from "../assets/real-estate/valledelmaiz.jpg";
-import homeplaceholder from "../assets/real-estate/homeplaceholder.jpg";
 
 // Everything personal about the site lives here — edit freely.
 const profile = {
@@ -85,7 +84,8 @@ export const realEstate = [
   { kind: "Single-family", location: "Houston, TX", year: "2022", image: _3907wildwoodvalleyct },
   { kind: "Single-family", location: "University Place, WA", year: "2022", image: _741625thstw },
   { kind: "Single-family", location: "San Miguel de Allende, MX", year: "2023", image: valledelmaiz },
-  { kind: "Single-family", location: "University Place, WA", year: "Coming soon", image: homeplaceholder },
+  { kind: "Viñedo San Miguel", location: "San Miguel de Allende, MX" },
+  { kind: "Single-family", location: "Reno, NV" }, // 985 Ridgeview Dr — address left off the public site
 ];
 
 export default profile;

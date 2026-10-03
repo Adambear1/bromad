@@ -1,7 +1,8 @@
 import React from "react";
-import { visited, bucketList, vibes, flags } from "../data/travel";
+import { visited, vibes, flags, countryInfo } from "../data/travel";
+import photoCredits from "../data/photoCredits";
 import TravelMap from "../components/TravelMap";
-import { FilterBar, PageHeader, Photo, RankRow, SectionTitle, Stars, Stat } from "../components/ui";
+import { FilterBar, PageHeader, Photo, RankRow, Stars, Stat } from "../components/ui";
 
 const place = ({ region, country }) => [region, country].filter(Boolean).join(", ");
 const slug = (name) => `place-${name.toLowerCase().normalize("NFD").replace(/[^a-z]+/g, "-")}`;
@@ -70,6 +71,7 @@ export default function Travel() {
   const [focus, setFocus] = React.useState(null);
 
   const countries = [...new Set(visited.map((p) => p.country))];
+  const continents = new Set(countries.map((c) => countryInfo[c]?.continent).filter(Boolean));
   const shown = vibe ? visited.filter((p) => p.vibes?.includes(vibe)) : visited;
   const vibeOptions = vibes
     .map((v) => ({ id: v, label: v[0].toUpperCase() + v.slice(1), count: visited.filter((p) => p.vibes?.includes(v)).length }))
@@ -93,19 +95,19 @@ export default function Travel() {
   return (
     <div className="container">
       <PageHeader eyebrow="Travel" title="Where I've been">
-        {visited.length} places across {countries.length} countries, mostly Latin America — with honest
-        opinions on most of them. Tap a pin or a place for the write-up.
+        {visited.length} places across {countries.length} countries and {continents.size} continents — with
+        honest opinions on most of them. Tap a pin or a place for the write-up.
       </PageHeader>
 
       <div className="stats" style={{ marginBottom: 24 }}>
         <Stat value={visited.length} label="places visited" />
         <Stat value={countries.length} label="countries" />
-        <Stat value={visited.filter((p) => p.rating).length} label="reviewed" />
-        <Stat value={bucketList.length} label="on the bucket list" />
+        <Stat value={visited.filter((p) => p.rating).length} label="rated" />
+        <Stat value={continents.size} label="continents" />
       </div>
 
       <div className="card map-card">
-        <TravelMap places={visited} upcoming={bucketList} onSelect={selectFromMap} />
+        <TravelMap places={visited} onSelect={selectFromMap} />
       </div>
 
       <div className="toolbar" style={{ marginTop: 40 }}>
@@ -131,20 +133,23 @@ export default function Travel() {
         </section>
       ))}
 
-      <section className="section">
-        <SectionTitle title="Up next" />
-        <div className="tiles">
-          {bucketList.map((c) => (
-            <figure className="tile" key={c.name}>
-              <Photo src={c.image} alt={c.name} fallback={flags[c.country]} />
-              <figcaption>
-                {c.name}
-                <small>{place(c)}</small>
-              </figcaption>
-            </figure>
+      <details className="credits">
+        <summary>Photo credits</summary>
+        <p className="muted">
+          Some photos are from Wikimedia Commons, used under their Creative Commons licences:
+        </p>
+        <ul>
+          {photoCredits.map((c) => (
+            <li key={c.place}>
+              {c.place} —{" "}
+              <a href={c.source} target="_blank" rel="noopener noreferrer">
+                {c.author || "Wikimedia Commons"}
+              </a>
+              , {c.license}
+            </li>
           ))}
-        </div>
-      </section>
+        </ul>
+      </details>
     </div>
   );
 }

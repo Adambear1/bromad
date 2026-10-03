@@ -1,7 +1,7 @@
 import React from "react";
 import profile, { ventures } from "../data/profile";
 import projects from "../data/projects";
-import { visited, bucketList } from "../data/travel";
+import { visited } from "../data/travel";
 import wines from "../data/wine";
 import TravelMap from "../components/TravelMap";
 import { SectionTitle } from "../components/ui";
@@ -19,7 +19,7 @@ const services = [
 ];
 
 export default function Home() {
-  const featured = projects.filter((p) => p.featured);
+  const featured = projects.filter((p) => p.featured).slice(0, 5);
   const countries = new Set(visited.map((p) => p.country));
   const topWines = rankedWines().slice(0, 4);
   const pwa = ventures[0];
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
                 <span className="more-link">Explore the map →</span>
               </div>
-              <TravelMap places={visited} upcoming={bucketList} compact />
+              <TravelMap places={visited} compact />
             </a>
             <a className="card off-card" href="#/wine">
               <div className="off-head">

@@ -15,8 +15,8 @@ export function ProjectCard({ project, large = false }) {
   const { slug, title, year, status, summary, stack = [] } = project;
   return (
     <a className={`card work-card${large ? " large" : ""}`} href={`#/projects/${slug}`}>
-      <div className="work-cover">
-        <Cover project={project} />
+      <div className="work-cover" style={{ "--c": project.accent }}>
+        <Cover project={project} fit={large ? "meet" : "slice"} />
       </div>
       <div className="work-body">
         <div className="work-meta">

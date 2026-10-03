@@ -29,7 +29,7 @@ function App() {
   React.useEffect(() => {
     const onHashChange = () => {
       setRoute(readRoute());
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "instant" });
     };
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);

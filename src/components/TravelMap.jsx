@@ -3,7 +3,7 @@ import { geoMercator, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 
 const W = 1000;
-const H = 640;
+const H = 560;
 
 // Loaded on demand so the atlas (~100 kB) stays out of the main bundle.
 let atlasPromise;
@@ -15,7 +15,7 @@ function loadCountries() {
   return atlasPromise;
 }
 
-export default function TravelMap({ places, upcoming = [], onSelect, compact = false }) {
+export default function TravelMap({ places, onSelect, compact = false }) {
   const [countries, setCountries] = React.useState(null);
   const [hover, setHover] = React.useState(null);
 
@@ -35,8 +35,6 @@ export default function TravelMap({ places, upcoming = [], onSelect, compact = f
   }, [places, height, compact]);
   const path = geoPath(projection);
   const visitedCountries = new Set(places.map((p) => p.country));
-  const [vx0, vy0, vx1, vy1] = [0, 0, W, height];
-  const inView = ([x, y]) => x >= vx0 && x <= vx1 && y >= vy0 && y <= vy1;
 
   return (
     <div className="map-wrap">
@@ -49,15 +47,6 @@ export default function TravelMap({ places, upcoming = [], onSelect, compact = f
             className={visitedCountries.has(f.properties.name) ? "map-land visited" : "map-land"}
           />
         ))}
-        {upcoming.map((p) => {
-          const xy = projection(p.coords);
-          if (!xy || !inView(xy)) return null;
-          return (
-            <circle key={`u-${p.name}`} cx={xy[0]} cy={xy[1]} r={compact ? 6 : 5} className="map-pin upcoming">
-              <title>{`${p.name} — on the list`}</title>
-            </circle>
-          );
-        })}
         {places.map((p) => {
           const [x, y] = projection(p.coords);
           const active = hover?.name === p.name;
@@ -84,12 +73,6 @@ export default function TravelMap({ places, upcoming = [], onSelect, compact = f
         >
           <strong>{hover.name}</strong>
           <span>{[hover.region, hover.country].filter(Boolean).join(", ")}</span>
-        </div>
-      )}
-      {!compact && (
-        <div className="map-legend">
-          <span><i className="dot visited" /> Visited</span>
-          <span><i className="dot upcoming" /> On the list</span>
         </div>
       )}
     </div>

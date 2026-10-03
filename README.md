@@ -1,6 +1,7 @@
 # Adam Birgenheier — personal site
 
-Portfolio plus the personal bits: ranked cities, a running wine log, and food & drink rankings.
+Portfolio + the personal bits: a travel map with city reviews and a running wine log.
+Built with React + Vite, deployed to GitHub Pages.
 
 ## Editing content
 
@@ -8,23 +9,22 @@ All content lives in `src/data/` — no component changes needed:
 
 | File | What's in it |
 | --- | --- |
-| `profile.js` | Name, tagline, bio, maxims, "Now" list, contact links |
-| `projects.js` | Projects (software, client work, ventures, real estate). `featured: true` puts one on the home page |
-| `travel.js` | Ranked cities (array order **is** the ranking), visited-but-unranked places, bucket list |
-| `wine.js` | Wine log — ranked by `score` (out of 10). Remove `placeholder: true` once an entry is real |
-| `eats.js` | Food & drinks (array order is the ranking) |
+| `profile.js` | Headline, bio, skills, maxims, "Now", contact links, ventures, real estate |
+| `projects.js` | Projects. `featured: true` puts one on the home page; entries with `highlights` get a detail page at `#/projects/<slug>` |
+| `travel.js` | Places visited (with `[lng, lat]` coords for the map), ratings, reviews, bucket list |
+| `wine.js` | Wine log, ranked by `score` (out of 10). Remove `placeholder: true` once an entry is real |
 
-Empty optional fields are hidden in the UI, so it's fine to leave things blank.
-Images go in `src/utils/images/` and are imported at the top of the data file.
+Empty optional fields are hidden in the UI. Photos go in `src/assets/` and are imported at the top
+of the data file. Project covers are generated from each project's `accent` colour.
 
 ## Running
 
 ```bash
 npm install
-npm start          # dev server on http://localhost:3000
-npm run build      # production build
+npm run dev        # dev server
+npm run build      # production build → dist/
 npm run deploy     # build + publish to GitHub Pages
 ```
 
-Pages use hash routes (`#/projects`, `#/travel`, `#/wine`, `#/eats`, `#/about`) so every
-page is linkable on GitHub Pages without server rewrites.
+Routes are hash-based (`#/projects`, `#/projects/schemalens`, `#/travel`, `#/wine`, `#/about`),
+so every page is linkable on GitHub Pages without server rewrites.

@@ -111,12 +111,10 @@ export default function About() {
         <div className="tiles">
           {realEstate.map((r, i) => (
             <figure className="tile" key={i}>
-              <Photo src={r.image} alt={`${r.kind} in ${r.location}`} />
+              <Photo src={r.image} alt={`${r.kind} in ${r.location}`} fallback="🏠" />
               <figcaption>
                 {r.location}
-                <small>
-                  {r.kind} · {r.year}
-                </small>
+                <small>{[r.kind, r.year].filter(Boolean).join(" · ")}</small>
               </figcaption>
             </figure>
           ))}

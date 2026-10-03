@@ -98,7 +98,7 @@ export default function Wine() {
       {shown.length === 0 ? (
         <div className="empty">Nothing here yet.</div>
       ) : (
-        <ol className="ranked">
+        <ol className="ranked ranked-numbered">
           {shown.map((w) => (
             <RankRow
               key={`${w.producer}-${w.name}-${w.vintage}`}

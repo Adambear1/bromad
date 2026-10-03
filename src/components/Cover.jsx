@@ -77,13 +77,13 @@ function Network({ rand }) {
   );
 }
 
-export default function Cover({ project, className = "" }) {
+export default function Cover({ project, className = "", fit = "slice" }) {
   const rand = seeded(project.slug);
   const accent = project.accent || "#7d1f3c";
   const Motif = project.kind === "app" ? Phone : project.kind === "analytics" ? Network : Dashboard;
   const id = `g-${project.slug}`;
   return (
-    <svg className={`cover ${className}`} viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" style={{ "--c": accent }} role="img" aria-label={`${project.title} cover`}>
+    <svg className={`cover ${className}`} viewBox="0 0 400 250" preserveAspectRatio={`xMidYMid ${fit}`} style={{ "--c": accent }} role="img" aria-label={`${project.title} cover`}>
       <defs>
         <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stopColor={accent} />
