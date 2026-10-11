@@ -4,6 +4,7 @@ import _710111thsts from "../assets/real-estate/710111thsts.jpg";
 import _3907wildwoodvalleyct from "../assets/real-estate/3907wildwoodvalleyct.jpg";
 import _741625thstw from "../assets/real-estate/741625thstw.jpg";
 import valledelmaiz from "../assets/real-estate/valledelmaiz.jpg";
+import vsm from "../assets/real-estate/vsm.jpg";
 
 // Everything personal about the site lives here — edit freely.
 const profile = {
@@ -11,27 +12,27 @@ const profile = {
   shortName: "Adam",
   role: "Web analytics engineer & builder",
   location: "Tacoma, WA",
-  headline: "I make data trustworthy — then build products on top of it.",
+  headline: "I make data trustworthy and build.",
   tagline:
-    "Analytics engineer with 5+ years implementing tracking on 100+ websites. Founder of Precision Web Analytics. Lately I build AI-powered products for marketers and investors — and keep an honest ranking of every city and wine I come across.",
+    "Analytics engineer with 6+ years implementing tracking on 100+ websites. Founder of Precision Web Analytics. Lately I build AI-powered products for marketers and investors, and keep an honest ranking of every city and wine I come across.",
   links: {
     github: "https://github.com/Adambear1",
-    linkedin: "https://www.linkedin.com/in/ajbirgenheier",
+    linkedin: "https://www.linkedin.com/in/adambirgenheier/",
     email: "contact@precisionwebanalytics.com",
   },
   bio: [
-    "I'm a web analytics engineer. For more than five years I've implemented, audited and maintained tracking for over a hundred websites — Google Tag Manager, GA4, server-side tagging, ad conversion APIs, consent management and attribution. Through Precision Web Analytics I help businesses get to data they can actually trust.",
+    "I'm a web analytics engineer. For more than five years I've implemented, audited and maintained tracking for dozens of enterprise clients: Google Tag Manager, GA4, server-side tagging, ad conversion APIs, consent management, CDPs, and data warehouses. Through Precision Web Analytics I help businesses get to data they can actually trust.",
     "That work keeps pointing me at problems worth building for. So I build: tools that check what tracking really fires, products that measure how AI models talk about a brand, schema tooling that deploys its own fixes, and a handful of apps for my own investing, learning and travel.",
-    "Outside of code I invest in real estate in Washington, Nevada, Texas and Mexico, and spend as much time as I can on the road across Latin America.",
+    "Outside of code I invest in real estate in Washington, Nevada, Texas and Mexico, and spend as much time on the road exploring and traveling with my family.",
   ],
   skills: [
     {
       group: "Analytics engineering",
-      items: ["Google Tag Manager", "Server-side GTM", "GA4", "Conversion APIs", "Consent (CMP)", "Attribution", "BigQuery", "Looker Studio"],
+      items: ["Google Tag Manager", "Server-side GTM", "GA4", "Conversion APIs", "Consent (CMP)", "BigQuery", "Looker Studio"],
     },
     {
       group: "Product engineering",
-      items: ["React", "Next.js", "React Native / Expo", "TypeScript", "Node.js", "Supabase / Postgres", "Firebase"],
+      items: ["React", "Next.js", "React Native / Expo", "TypeScript", "Node.js", "Python", "Supabase / Postgres", "Firebase"],
     },
     {
       group: "AI & infrastructure",
@@ -48,7 +49,7 @@ const profile = {
       body: "The best returns I've had came from putting money and time into myself — learning new crafts, starting businesses, buying property I can actually control — before anything I can't.",
     },
     {
-      title: "Always be learning.",
+      title: "Always learn.",
       body: "I learn best through action. Travelling, exploring and meeting new people keeps that loop going even when I'm not sitting down with a textbook.",
     },
   ],
@@ -73,7 +74,7 @@ export const ventures = [
     name: "The Bromad",
     role: "Founder",
     year: "2022–24",
-    summary: "My earlier travel and international-investing brand — and the first version of this site.",
+    summary: "My earlier travel and international-investing brand, and the first version of this site.",
   },
 ];
 
@@ -84,7 +85,7 @@ export const realEstate = [
   { kind: "Single-family", location: "Houston, TX", year: "2022", image: _3907wildwoodvalleyct },
   { kind: "Single-family", location: "University Place, WA", year: "2022", image: _741625thstw },
   { kind: "Single-family", location: "San Miguel de Allende, MX", year: "2023", image: valledelmaiz },
-  { kind: "Viñedo San Miguel", location: "San Miguel de Allende, MX" },
+  { kind: "Viñedo San Miguel", location: "San Miguel de Allende, MX", year: "2026", image: vsm },
   { kind: "Single-family", location: "Reno, NV" }, // 985 Ridgeview Dr — address left off the public site
 ];
 

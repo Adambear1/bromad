@@ -44,7 +44,7 @@ export default function Home() {
             </a>
           </div>
           <dl className="hero-facts">
-            <div><dt>5+ yrs</dt><dd>analytics engineering</dd></div>
+            <div><dt>6+ yrs</dt><dd>analytics engineering</dd></div>
             <div><dt>100+</dt><dd>websites instrumented</dd></div>
             <div><dt>{shipped}</dt><dd>products & apps built</dd></div>
             <div><dt>{countries.size}</dt><dd>countries explored</dd></div>
